@@ -1,5 +1,5 @@
 module.exports = {
-  opusbootstrap: (params) => 
+  cloudcatalog: (params) => 
   `UPDATE opus_migration
    SET migrating = true
    WHERE (ecid, location_id, iptv_id) IN (
@@ -8,8 +8,8 @@ module.exports = {
     AND migrating is FALSE
     LIMIT 1)
   RETURNING *;`,
-  opusuuidremapping: (params) => 
-  `UPDATE opus_mailboxes
+  cloudcatalogidremapping: (params) => 
+  `UPDATE cloud_catalog
    SET migrating = true
    WHERE (target_mailbox) IN (
       SELECT target_mailbox FROM opus_mailboxes
@@ -25,7 +25,7 @@ module.exports = {
     WHERE status = 'skipped'  
     LIMIT 1)
   RETURNING *;`,
-  opusvalidation: (params) => 
+  cloudcatalogcalidation: (params) => 
   `UPDATE opus_migration
     SET migrating = true
     WHERE (ecid, location_id) IN (

@@ -1,7 +1,7 @@
 @cloud-catalog
 @cc-3
 @cc
-@DBbootstrap=cloud-catalog
+@DBbootstrap=cloudcatalog
 @runTimes=200
 
 Feature: Update Chosen Offerings via Cloud Catalog API 

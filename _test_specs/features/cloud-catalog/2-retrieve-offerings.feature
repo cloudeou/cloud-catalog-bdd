@@ -1,7 +1,7 @@
 @cloud-catalog
 @cc-2
 @cc
-@DBbootstrap=cloud-catalog
+@DBbootstrap=cloudcatalog
 @runTimes=1
 
 Feature: Retrieve offerings and store to DB

@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <_0:createAndStartRequestByValueRequest xmlns:_0="http://ossj.org/xml/OrderManagement/v1-0" xmlns:_5="http://ossj.org/xml/Common-CBECore/v1-5" xmlns:_5_1="http://ossj.org/xml/Common-CBEProduct/v1-5" xmlns:_5_2="http://ossj.org/xml/Common/v1-5" xmlns:_5_3="http://ossj.org/xml/Common-CBEBi/v1-5" xmlns:_5_4="http://ossj.org/xml/Common-CBEService/v1-5">
+         <_0:requestValue xsi:type="_0:ServiceOrderValue">
+            <_5:describingSpecificationKey xsi:type="_5_1:ProductSpecificationKey">
+               <_5_2:type>ServiceOrderSpecificationKey</_5_2:type>
+               <_5_2:primaryKey xsi:type="xsd:string">request_spec</_5_2:primaryKey>
+            </_5:describingSpecificationKey>
+            <_0:requestedCompletionDate>#REQ_DATE#</_0:requestedCompletionDate>
+            <_0:serviceOrderItems>
+               <_0:item>
+                  <_5_3:action>Modify</_5_3:action>
+                  <_0:service>
+                     <_5_2:key xsi:type="_5_4:ServiceKey">
+                        <_5_2:type>iptvServiceKey</_5_2:type>
+                        <_5_2:primaryKey xsi:type="xsd:string">#IPTV_ID#</_5_2:primaryKey>
+                        <!--BAU-bss-TOnFibre-Internet OBJECT ID of the IPTV CFS instance first version from your customer-->
+                     </_5_2:key>
+                     <_5:describedBy>                        
+                        <_5:item>
+                           <_5:value xsi:type="xsd:string">No</_5:value>
+                           <_5:characteristic>Error Status Notifications</_5:characteristic>
+                        </_5:item>
+                     </_5:describedBy>
+                     <_5:describingSpecificationKey xsi:type="_5_4:ServiceSpecificationKey">
+                        <_5_2:type>iptvServiceSpecKey</_5_2:type>
+                        <_5_2:primaryKey xsi:type="xsd:string">9134835128913241540</_5_2:primaryKey>
+                     </_5:describingSpecificationKey>
+                  </_0:service>
+               </_0:item>
+            </_0:serviceOrderItems>
+         </_0:requestValue>
+      </_0:createAndStartRequestByValueRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
